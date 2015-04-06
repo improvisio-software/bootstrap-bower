@@ -1993,7 +1993,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
           });
         } else {
           // Ensure this call is async
-          $timeout(afterAnimating);
+          scope.$evalAsync(afterAnimating);
         }
 
         function afterAnimating() {
